@@ -26,9 +26,6 @@ jobs:
 
       - name: Setup Environment
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.VENDOR_PONCES_HOST_KEY }}" >> ~/.ssh/known_hosts
-          chmod 644 ~/.ssh/known_hosts
           git lfs install
           git config --global user.name "Alberto Ponces"
           git config --global user.email "ponces26@gmail.com"
