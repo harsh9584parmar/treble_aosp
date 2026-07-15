@@ -17,6 +17,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Maximize GitHub Runner Space
+        uses: justinthelaw/maximize-github-runner-space@v0.10.0
+        with:
+          cleanup-profile: max
+
       - name: Cleanup
         run: |
           ls -la ./
