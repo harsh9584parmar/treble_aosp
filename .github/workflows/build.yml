@@ -26,11 +26,13 @@ jobs:
 
       - name: Setup Environment
         run: |
+          sudo curl -Lo /usr/local/bin/repo https://storage.googleapis.com/git-repo-downloads/repo
+          sudo chmod a+x /usr/local/bin/repo
           git lfs install
           git config --global user.name "Alberto Ponces"
           git config --global user.email "ponces26@gmail.com"
           mkdir -p ${{ github.workspace }}/aosp
-
+          
       - name: Checkout
         uses: actions/checkout@v4
         with:
